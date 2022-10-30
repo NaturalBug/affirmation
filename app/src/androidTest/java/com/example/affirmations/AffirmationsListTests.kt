@@ -20,7 +20,7 @@ class AffirmationsListTests {
     fun scroll_to_item() {
         onView(withId(R.id.recycler_view)).perform(
             RecyclerViewActions
-                .scrollToPosition<RecyclerView.ViewHolder>(9)
+                .scrollTo<RecyclerView.ViewHolder>(withText(R.string.affirmation10))
         )
 
         onView(withText(R.string.affirmation10))
